@@ -42,8 +42,8 @@ const players = document.getElementById('players').addEventListener('click', fun
 function total(){
   const playerNumbers =document.getElementById('selectedNumbers').innerText.length;
   if(playerNumbers >0){
-    listNumbers =parseInt(document.getElementById('selectedNumbers').innerText);
-    const perPlayer =parseInt(document.getElementById('perPlayer').value);
+    listNumbers =parseFloat(document.getElementById('selectedNumbers').innerText);
+    const perPlayer =parseFloat(document.getElementById('perPlayer').value);
     const playerExpenses= document.getElementById('playerExpenses').innerText=listNumbers * perPlayer;
     return playerExpenses;
   }
@@ -63,7 +63,7 @@ const calculateTotal = document.getElementById('calculateTotal').addEventListene
     total();
     const manager = parseFloat(document.getElementById('manager').value);
     const coach = parseFloat(document.getElementById('coach').value);
-    const playerExpense =parseInt(document.getElementById('playerExpenses').innerText);
+    const playerExpense =parseFloat(document.getElementById('playerExpenses').innerText);
 
    document.getElementById('total').innerText=(manager+coach+playerExpense);
 })
